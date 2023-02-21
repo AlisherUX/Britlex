@@ -1,4 +1,6 @@
 .header {
+
+  background-color: red;
   &-top {
     padding-block: 55px;
     @include flexBetween;
