@@ -1,0 +1,24 @@
+@mixin flexBetween {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+@mixin title{
+        font-size: 48px;
+        color: $dark;
+        font-family: $pop-sem;
+}
+
+@mixin card-title-style{
+        font-size: 30px;
+        color: $text-color;
+        font-family: $pop-sem;
+}
+
+@mixin text-style {
+        font-size: 20px;
+        line-height: 30px;
+        font-family: $pop-reg;
+        color: $gray;
+}

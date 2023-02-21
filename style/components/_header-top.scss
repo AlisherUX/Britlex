@@ -1,0 +1,107 @@
+.header {
+  &-top {
+    padding-block: 55px;
+    @include flexBetween;
+
+    @include mediaMobileFirst (705){
+      padding-block:40px 0;
+    }
+    
+    &_menu {
+      display: flex;
+      gap: 59px;
+      
+      
+      @include mediaMobileFirst (992) {
+        gap: 20px;
+      }
+      @include mediaMobileFirst (767) {
+        display: none;
+      }
+    }
+    
+    &_link {
+      color: $text-color;
+      font-family: $pop-med;
+      font-size: 20px;
+      position: relative;
+
+      @include mediaMobileFirst (992){
+        font-size: 16px;
+      }
+    }
+    
+    &_link::after {
+      content: "";
+      width: 0;
+      height: 3px;
+      background-color:$text-color;
+      position: absolute;
+      left: 0;
+      top: 30px;
+      transition: 0.5s;
+    }
+
+    &_link:hover::after {
+      width: 100%;
+    }
+    
+    &_button {
+      max-width: 220px;
+      width: 100%;
+      padding-block:17px;
+      background-color: $white;
+      border: 2px solid $text-color;
+      border-radius: 5px;
+      color: $dark;
+      font-size: 24px;
+      line-height: 36px;
+      font-family: $pop-reg;
+      transition: 0.3s;
+      cursor: pointer;
+
+      @include mediaMobileFirst(992){
+        max-width: 160px;
+        width: 100%;
+        padding-block:13px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      
+      @include mediaMobileFirst (767) {
+        display: none;
+      }
+    }
+    
+    &_button:hover{
+      color: $white;
+      background-color:$text-color;
+    }
+
+
+    .burger-menu{
+      display:none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height:17px;
+      background-color:$white;
+
+      .burger-menu_box,
+      .burger-menu_item{
+        width: 100%;
+        height: 3px;
+        background-color:$text-color;
+        border-radius: 1px;
+      }
+
+      .burger-menu_item{
+        width: 21px;
+      }
+    
+      @include mediaMobileFirst(767){
+        display:flex;
+      }
+    }
+  }
+}

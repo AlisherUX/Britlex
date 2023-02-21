@@ -1,0 +1,175 @@
+.header-banner {
+  @include flexBetween;
+  margin-top: 10px;
+
+@include mediaMobileFirst (995){
+  justify-content: space-evenly;
+}
+
+  @include mediaMobileFirst(705) {
+    flex-direction: column-reverse;
+  }
+
+
+  &_img {
+    max-width: 661px;
+    width: 100%;
+
+    @include mediaMobileFirst(1225) {
+      max-width: 460px;
+      width: 100%;
+    }
+
+    @include mediaMobileFirst(935) {
+      max-width: 352px;
+      width: 100%;
+    }
+
+    @include mediaMobileFirst(705) {
+      max-width: 424px;
+      width: 100%;
+    }
+  }
+}
+
+.header-item {
+  display: flex;
+  flex-direction: column;
+
+  &_title {
+    @include title;
+    font-size: 64px;
+    line-height: 80px;
+    max-width: 386px;
+    width: 100%;
+    position: relative;
+
+    @include mediaMobileFirst(1225) {
+      font-size: 48px;
+      line-height: 64px;
+      max-width: 290px;
+      width: 100%;
+    }
+
+    @include mediaMobileFirst(935) {
+      font-size: 36px;
+      line-height: 45px;
+      max-width: 217px;
+      width: 100%;
+    }
+
+    @include mediaMobileFirst(705) {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+      margin-top:34px;
+    }
+
+    @include mediaMobileFirst(550) {
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+      
+    }
+  }
+
+  &_text {
+    font-size: 24px;
+    line-height: 36px;
+    max-width: 526px;
+    width: 100%;
+    font-family: $pop-reg;
+    color: $gray;
+    margin-block: 40px 61px;
+
+    @include mediaMobileFirst(1225) {
+      max-width: 417px;
+      width: 100%;
+      font-size: 20px;
+      line-height: 30px;
+      margin-block: 27px 33px;
+    }
+
+    @include mediaMobileFirst(935) {
+      max-width: 332px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 24px;
+      margin-block: 25px 32px;
+    }
+
+    @include mediaMobileFirst(705) {
+      text-align: center;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &_button {
+    max-width: 418px;
+    width: 100%;
+    padding-block: 32px;
+    background-color: $text-color;
+    border: 2px solid $text-color;
+    border-radius: 5px;
+    font-family: $pop-reg;
+    color: $white;
+    font-size: 36px;
+    line-height: 54px;
+    transition: 0.3s;
+    cursor: pointer;
+
+    @include mediaMobileFirst(1225) {
+      max-width: 292px;
+      width: 100%;
+      padding-block: 22px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    @include mediaMobileFirst(935) {
+      max-width: 236px;
+      width: 100%;
+      padding-block: 19px;
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    @include mediaMobileFirst(705) {
+      margin: 0 auto;
+      max-width: 305px;
+      width: 100%;
+    }
+  }
+
+  &_button:hover {
+    background-color: $white;
+    color: $text-color;
+  }
+
+
+  @include mediaMobileFirst(705) {
+    width: 100%;
+  }
+}
+
+.header-item_title::after {
+  content: url(../img/lamp.png);
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  top: 104px;
+  right: -132px;
+
+  @include mediaMobileFirst(1225) {
+    top: 81px;
+    right: -105px;
+  }
+
+  @include mediaMobileFirst(935) {
+    display: none;
+  }
+}

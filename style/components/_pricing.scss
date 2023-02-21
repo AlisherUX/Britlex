@@ -1,0 +1,211 @@
+.pricing-title {
+  @include title;
+  text-align: center;
+  margin-block: 222px 71px;
+
+  @include mediaMobileFirst(1210) {
+    margin-block: 122px 55px;
+  }
+
+}
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+
+  @include mediaMobileFirst(815) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:60px;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 419px;
+    width: 100%;
+
+    &_img {
+      max-width: 311px;
+      width: 100%;
+
+      @include mediaMobileFirst(1210) {
+        max-width: 222px;
+      }
+
+      @include mediaMobileFirst(910) {
+        max-width: 197px;
+      }
+
+      @include mediaMobileFirst(815) {
+        max-width: 291px;
+        display: block;
+        margin: auto;
+      }
+    }
+
+    .pricing-wrapper {
+      margin-top: 40px;
+
+      @include mediaMobileFirst(1210) {
+        margin-top: 0;
+      }
+
+      @include mediaMobileFirst(815) {
+        margin-top: 30px;
+      }
+
+      &_title {
+        @include card-title-style;
+
+        @include mediaMobileFirst(1210) {
+          font-size: 22px;
+        }
+
+        @include mediaMobileFirst(1210) {
+          font-size: 20px;
+        }
+
+        @include mediaMobileFirst(815) {
+          font-size: 24px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      &_text {
+        @include text-style;
+        margin-block: 30px;
+        max-width: 419px;
+        width: 100%;
+
+        @include mediaMobileFirst(1210) {
+          font-size: 16px;
+          line-height: 24px;
+          margin-block: 14px 31px;
+          max-width: 300px;
+        }
+
+        @include mediaMobileFirst(1210) {
+          font-size: 14px;
+          line-height: 21px;
+          margin-block: 14px 23px;
+          max-width: 250px;
+        }
+
+        @include mediaMobileFirst(815) {
+          width: 100%;
+          margin: auto;
+          text-align: center;
+          margin-block:20px;
+        }
+      }
+
+      &_button {
+        @include flexBetween;
+        gap: 8px;
+        border-radius: 5px;
+        border: none;
+        padding-inline: 24px;
+        font-family: $pop-reg;
+        font-size: 18px;
+        color: $button-color;
+
+        @include mediaMobileFirst(1210) {
+          padding-inline: 12px;
+          font-size: 16px;
+        }
+
+        @include mediaMobileFirst(815) {
+          margin: auto;
+        }
+
+        &_number {
+          font-weight: 400;
+          font-size: 30px;
+          line-height: 45px;
+          color: $text-color;
+
+          @include mediaMobileFirst(1210) {
+            font-size: 24px;
+            line-height: 36px;
+          }
+        }
+      }
+    }
+
+    .second-text {
+      margin-block: 36px 59px;
+      max-width: 382px;
+      width: 100%;
+
+      @include mediaMobileFirst(1210) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-block: 9px 52px;
+        max-width: 280px;
+      }
+
+      @include mediaMobileFirst(815) {
+        text-align: center;
+        margin-block:20px;
+      }
+    }
+    .second-img {
+      max-width: 391px;
+      width: 100%;
+
+      @include mediaMobileFirst(1210) {
+        max-width: 267px;
+      }
+
+      @include mediaMobileFirst(910) {
+        max-width: 219px;
+      }
+
+      @include mediaMobileFirst(815) {
+        max-width: 314px;
+        display: block;
+        margin: auto;
+      }
+    }
+    .third_img {
+      max-width: 340px;
+      width: 100%;
+      display: block;
+      margin: auto;
+
+      @include mediaMobileFirst(1210) {
+        max-width: 242px;
+      }
+
+      @include mediaMobileFirst(910) {
+        max-width: 210px;
+      }
+
+      @include mediaMobileFirst(815) {
+        max-width: 253px;
+        display: block;
+        margin: auto;
+      }
+    }
+    .third-text {
+      margin-block: 33px 58px;
+      max-width: 366px;
+      width: 100%;
+
+      @include mediaMobileFirst(1210) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-block: 9px 34px;
+        max-width: 266px;
+      }
+
+      @include mediaMobileFirst(815) {
+        text-align: center;
+        margin-block:20px;
+      }
+    }
+  }
+}

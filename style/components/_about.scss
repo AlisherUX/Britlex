@@ -1,0 +1,214 @@
+.about {
+    margin-top: 282px;
+    @include flexBetween;
+
+    @include mediaMobileFirst (920) {
+        margin-top: 180px;
+    }
+
+    @include mediaMobileFirst (760) {
+        flex-direction: column-reverse;
+        margin-top:100px;
+    }
+
+    @include mediaMobileFirst (573) {
+        margin-top:10px;
+     }
+
+    &-img {
+        max-width: 500px;
+        width: 100%;
+
+        @include mediaMobileFirst (1143) {
+            max-width: 336px;
+        }
+
+        @include mediaMobileFirst (760) {
+            max-width: 352px;
+        }
+
+        @include mediaMobileFirst (573) {
+            max-width: 283px;
+        }
+    }
+
+    &-info {
+
+        @include mediaMobileFirst (760) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &_title {
+            @include title;
+
+            @include mediaMobileFirst (1143) {
+                font-size: 36px;
+            }
+
+            @include mediaMobileFirst (900) {
+                font-size: 30px;
+            }
+
+            @include mediaMobileFirst (760) {
+                text-align: center;
+            }
+
+            @include mediaMobileFirst (573) {
+                font-size: 24px;
+                margin-block: 10px;
+            }
+        }
+
+        &_text {
+            margin-block: 44px;
+            @include text-style;
+            max-width: 635px;
+            width: 100%;
+
+            @include mediaMobileFirst (1143) {
+                font-size: 16px;
+                line-height: 24px;
+                margin-block: 34px;
+                max-width: 535px
+            }
+
+            @include mediaMobileFirst (900) {
+                font-size: 14px;
+                line-height: 21px;
+                margin-block: 20px;
+                max-width: 321px
+            }
+
+            @include mediaMobileFirst (760) {
+                text-align: center;
+                max-width: 510px
+            }
+
+            @include mediaMobileFirst (573) {
+                font-size: 13px;
+                line-height: 20px;
+                max-width: 100%;
+            }
+        }
+
+        &_statistic {
+            @include flexBetween;
+            max-width: 476px;
+            width: 100%;
+
+            @include mediaMobileFirst (1143) {
+                max-width: 376px;
+            }
+
+            @include mediaMobileFirst (573) {
+                flex-direction: column;
+                max-width: 100%;
+            }
+
+            .pupils {
+                font-size: 48px;
+                line-height: 80px;
+                font-family: $pop-sem;
+                color: $number;
+                position: relative;
+
+                @include mediaMobileFirst (1143) {
+                    font-size: 30px;
+                }
+
+                @include mediaMobileFirst (900) {
+                    font-size: 22px;
+                }
+            }
+
+            .pupils::after {
+                content: "pupils";
+                @include text-style;
+                position: absolute;
+                top: 66px;
+                left: 14px;
+
+                @include mediaMobileFirst (1143) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    left: 4px;
+                }
+
+                @include mediaMobileFirst (900) {
+                    font-size: 13px;
+                }
+            }
+
+            .teachers {
+                font-size: 48px;
+                line-height: 80px;
+                font-family: $pop-sem;
+                color: $number;
+                position: relative;
+
+                @include mediaMobileFirst (1143) {
+                    font-size: 30px;
+                }
+
+                @include mediaMobileFirst (900) {
+                    font-size: 22px;
+                }
+
+                @include mediaMobileFirst (573) {
+                    margin-block: 20px;
+                }
+            }
+
+            .teachers::after {
+                content: "Teachers";
+                @include text-style;
+                position: absolute;
+                top: 66px;
+                left: -22px;
+
+
+                @include mediaMobileFirst (1143) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+
+            .foreign {
+                font-size: 48px;
+                line-height: 80px;
+                font-family: $pop-sem;
+                color: $number;
+                position: relative;
+
+                @include mediaMobileFirst (1143) {
+                    font-size: 30px;
+                }
+
+                @include mediaMobileFirst (900) {
+                    font-size: 22px;
+                }
+            }
+
+            .foreign::after {
+                content: "Foreign languages";
+                width: 188px;
+                @include text-style;
+                position: absolute;
+                top: 66px;
+                left: -75px;
+
+
+                @include mediaMobileFirst (1143) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                @include mediaMobileFirst (573) {
+                    left: -62px;
+                }
+            }
+        }
+    }
+}

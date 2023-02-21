@@ -1,0 +1,403 @@
+.grid {
+  
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+
+    @include mediaMobileFirst (920){
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    @include mediaMobileFirst (700) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+    }
+  }
+
+  &-title {
+    margin-block: 127px 119px;
+    text-align: center;
+    @include title;
+
+    @include mediaMobileFirst(992) {
+      font-size: 36px;
+    }
+    @include mediaMobileFirst (520){
+      margin-block:40px;
+    }
+  }
+}
+
+.item {
+  background-color: $grid-color;
+  border-radius: 10px;
+}
+
+.grid-wrapper-card {
+  grid-row: span 5;
+  grid-column: span 2;
+
+  @include mediaMobileFirst(992) {
+    padding-inline: 22px;
+    grid-row: span 3;
+  }
+
+  @include mediaMobileFirst (767) {
+    padding-inline: 0;
+  }
+
+  @include mediaMobileFirst (700) {
+    grid-column: span 2;
+    grid-row: span 3;
+    padding-inline:9px;
+  }
+
+  @include mediaMobileFirst (520){
+    grid-column: span 4;
+    grid-row: span 6;
+  }
+
+  &_img {
+    max-width: 390px;
+    width: 100%;
+
+    @include mediaMobileFirst(992) {
+      max-width: 260px;
+    }
+
+    @include mediaMobileFirst (767) {
+      max-width: 214px;
+      margin-top: 31px;
+    }
+
+    @include mediaMobileFirst (700) {
+      max-width: 185px;
+      margin-top: 0;
+    }
+
+    @include mediaMobileFirst (520){
+      max-width: 313px;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .grid-info {
+    padding: 0 45px 92px 43px;
+    border-radius: 10px;
+    background-color: $grid-color;
+    margin-top: 10px;
+
+    @include mediaMobileFirst(992) {
+      padding: 0 0 52px 0;
+    }
+
+    @include mediaMobileFirst(767) {
+      padding: 0 17px 0 17px;
+    }
+
+    @include mediaMobileFirst (700){
+      padding: 0 0 36px 0;
+    }
+
+    &_title {
+      @include card-title-style;
+
+      @include mediaMobileFirst(992) {
+        font-size: 22px;
+      }
+      
+      @include mediaMobileFirst (767) {
+        font-size: 20px;
+      }
+      
+      @include mediaMobileFirst(700) {
+        font-size: 18px;
+      }
+      
+      @include mediaMobileFirst(520) {
+        font-size: 32px;
+      }
+
+    }
+
+    &_text {
+      font-size: 16px;
+      line-height: 24px;
+      font-family: $pop-reg;
+      color: $gray;
+      max-width: 337px;
+      width: 100%;
+      margin-block: 34px 39px;
+
+      @include mediaMobileFirst(992) {
+        font-size: 14px;
+        line-height: 21px;
+        margin-block: 23px 29px;
+      }
+      
+      @include mediaMobileFirst (767) {
+        font-size: 13px;
+        line-height: 20px;
+        margin-block: 19px 26px;
+      }
+      
+      @include mediaMobileFirst (700) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      
+      @include mediaMobileFirst(520) {
+        font-size: 14px;
+        line-height: 21px;
+        margin-block: 19px 26px;
+      }
+
+      &_item {
+        margin-bottom: 30px;
+      }
+    }
+
+    &_button {
+      font-size: 18px;
+      line-height: 27px;
+      background-color: $text-color;
+      border: 2px solid $text-color;
+      font-family: $pop-med;
+      color: $white;
+      padding-block: 17px;
+      max-width: 230px;
+      width: 100%;
+      border-radius: 5px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      @include mediaMobileFirst(992) {
+        max-width: 196px;
+      }
+
+      @include mediaMobileFirst (767) {
+        max-width: 178px;
+        font-size: 16px;
+        line-height: 24px;
+        padding-block: 15px;
+      }
+
+      @include mediaMobileFirst (700){
+        max-width: 200px;
+        font-size: 14px;
+        line-height: 21px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    &_button:hover {
+      background-color: $grid-color;
+      color: $text-color;
+    }
+  }
+}
+
+.writing-card,
+.house-card {
+  grid-row: span 3;
+  grid-column: span 2;
+
+  @include mediaMobileFirst(992) {
+    grid-row: span 2;
+  }
+
+  @include mediaMobileFirst (700) {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+
+  @include mediaMobileFirst (520){
+    grid-column: span 4;
+    grid-row: span 6;
+  }
+
+  .grid-info {
+    margin-top: 0;
+    padding: 0 45px 44px 43px;
+
+    @include mediaMobileFirst(992) {
+      padding: 0 0 0 0;
+    }
+
+    @include mediaMobileFirst (767) {
+      padding: 0 17px 0 17px;
+    }
+
+    @include mediaMobileFirst (520){
+      padding-bottom:44px;
+    }
+  }
+
+  .grid-wrapper-card_img {
+    max-width: 293px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+
+    @include mediaMobileFirst(992) {
+      max-width: 205px;
+    }
+
+    @include mediaMobileFirst (767) {
+      margin-top: 0;
+    }
+
+    @include mediaMobileFirst (700){
+      max-width: 182px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    @include mediaMobileFirst (520){
+      max-width: 304px;
+
+    }
+  }
+
+  .grid-info_text {
+    max-width: 370px;
+    width: 100%;
+    margin-block: 14px 10px;
+
+    @include mediaMobileFirst(992) {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    @include mediaMobileFirst (767) {
+      margin-block: 5px 10px;
+    }
+
+    @include mediaMobileFirst (700){
+      margin-block: 5px 92px;
+    }
+
+    @include mediaMobileFirst (520){
+      margin-block: 5px 22px;
+    }
+  }
+}
+
+.house-card {
+  .grid-wrapper-card_img {
+    max-width: 371px;
+    margin-left: 0;
+    margin-right: auto;
+    margin-block: 23px;
+
+    @include mediaMobileFirst(992) {
+      margin-block: 16px;
+      max-width: 243px;
+      width: 100%;
+    }
+
+    @include mediaMobileFirst(767) {
+      margin-block: 19px;
+      margin-top: 25px;
+    }
+
+    @include mediaMobileFirst (520){
+      max-width:336px;
+    }
+  }
+}
+
+.listening-card {
+  grid-row: span 2;
+  grid-column: span 4;
+  @include flexBetween;
+  padding-inline: 48px 25px;
+
+  @include mediaMobileFirst(992) {
+    grid-row: span 1;
+    padding-inline: 32px 18px;
+  }
+
+  @include mediaMobileFirst(767) {
+    padding-inline: 22px 0;
+  }
+
+  @include mediaMobileFirst (700) {
+    grid-column: span 2;
+    grid-row: span 3;
+    flex-direction: column-reverse;
+    justify-content:start;
+    padding-inline: 12px;
+  }
+
+  @include mediaMobileFirst (520){
+    grid-column: span 4;
+    grid-row: span 6;
+  }
+
+  .grid-info {
+    padding: 0;
+    margin-top: 0;
+
+    @include mediaMobileFirst (767) {
+      padding-block: 15px;
+    }
+
+    @include mediaMobileFirst (700){
+      padding-block:0;
+      margin-top: 30px;
+    }
+
+    @include mediaMobileFirst (520){
+      padding-bottom: 36px;
+    }
+  }
+
+  .grid-wrapper-card_img {
+    max-width: 382px;
+    width: 100%;
+
+    @include mediaMobileFirst (992) {
+      max-width: 254px;
+      width: 100%;
+    }
+
+    @include mediaMobileFirst (767) {
+      margin-top: 0px;
+    }
+
+    @include mediaMobileFirst (700){
+      max-width: 206px;
+      margin-top: 38px;
+    }
+
+    @include mediaMobileFirst (520){
+      max-width: 332px;
+    }
+  }
+
+  .grid-info_text {
+    margin-block: 7px 31px;
+    max-width: 340px;
+    width: 100%;
+
+    @include mediaMobileFirst (992) {
+      margin-block: 7px 11px;
+    }
+
+    @include mediaMobileFirst (767) {
+      margin-block: 7px;
+    }
+
+    @include mediaMobileFirst (700){
+      margin-block:7px 120px;
+    }
+
+    @include mediaMobileFirst (520){
+      margin-block:7px 20px;
+    }
+  }
+}

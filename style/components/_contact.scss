@@ -1,0 +1,167 @@
+.contact {
+  margin-top: 200px;
+  @include flexBetween;
+
+  @include mediaMobileFirst(1300) {
+    justify-content: space-around;
+  }
+
+  @include mediaMobileFirst (660){
+   flex-direction: column;
+   margin-top: 150px;
+}
+
+  &_img {
+    max-width: 477px;
+    width: 100%;
+
+    @include mediaMobileFirst(1300) {
+      max-width: 312px;
+    }
+
+    @include mediaMobileFirst(880) {
+      max-width: 223px;
+    }
+
+    @include mediaMobileFirst (660){
+      max-width: 358px;
+     }
+  }
+
+  &-item {
+    @include mediaMobileFirst (660){
+        margin-top: 50px;
+     }
+    &_title {
+      @include title;
+
+      @include mediaMobileFirst(1300) {
+        font-size: 36px;
+      }
+
+      @include mediaMobileFirst(880) {
+        font-size: 30px;
+      }
+
+      @include mediaMobileFirst (660){
+       font-size:38px;
+       text-align: center
+     }
+    }
+
+    &_text {
+      @include text-style;
+      max-width: 776px;
+      width: 100%;
+      margin-block: 37px 52px;
+      
+      @include mediaMobileFirst(1300) {
+          margin-block: 20px 20px;
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 500px;
+        }
+        
+        @include mediaMobileFirst(880) {
+        font-size: 14px;
+        line-height: 21px;
+        max-width: 360px;
+      }
+
+      @include mediaMobileFirst (660){
+          max-width: 100%;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          margin-block: 30px;
+     }
+    }
+
+    &_mail {
+      display: flex;
+      gap: 12px;
+
+      @include mediaMobileFirst (660){
+        gap: 0;
+     }
+
+     @include mediaMobileFirst (500){
+        flex-direction: column;
+        gap: 20px;
+     }
+
+      &_input {
+        padding-inline: 33px;
+        max-width: 450px;
+        height: 90px;
+        width: 100%;
+        top: calc(50% - 80px / 2 + 1911px);
+        border: 1px solid #8f95a5;
+        border-radius: 10px;
+        font-size: 16px;
+        line-height: 24px;
+        color: $gray;
+        font-family: $pop-reg;
+
+        @include mediaMobileFirst(1300) {
+          height: 60px;
+          max-width: 323px;
+          font-size: 14px;
+          line-height: 21px;
+        }
+
+        @include mediaMobileFirst(880) {
+          max-width: 283px;
+          height: 50px;
+        }
+
+        @include mediaMobileFirst (660){
+        max-width: 511px;
+        height: 80px;
+         }
+      }
+
+      &_button {
+        padding: 25px 82px;
+        background: $text-color;
+        border-radius: 10px;
+        border: 2px solid $text-color;
+        color: $white;
+        font-size: 20px;
+        line-height: 30px;
+        font-family: $pop-med;
+        cursor: pointer;
+        transition: 0.1s;
+
+        @include mediaMobileFirst(1300) {
+          padding: 0 50px;
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 193px;
+        }
+
+        @include mediaMobileFirst(880) {
+          max-width: 145px;
+          font-size: 13px;
+          line-height: 20px;
+          padding: 0 30px;
+        }
+
+        @include mediaMobileFirst (660){
+            padding: 0 70px;
+        max-width: 193px;
+         }
+
+         @include mediaMobileFirst (500){
+          padding-block:20px;
+            max-width: 100%;
+         }
+      }
+
+      &_button:active {
+        background-color: $white;
+        color: $text-color;
+      }
+    }
+  }
+}

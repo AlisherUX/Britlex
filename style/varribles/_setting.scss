@@ -1,0 +1,10 @@
+.container {
+ max-width: 1340px;
+ width: 100%;
+ padding: 0 15px;
+ margin: 0 auto;
+}
+
+.row {
+@include flexBetween;
+}
